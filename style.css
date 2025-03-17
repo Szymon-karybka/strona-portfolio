@@ -1,0 +1,287 @@
+
+
+body{
+    background: #FAFAFA;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    
+}
+h1      
+{
+    font-family: "Work Sans", "consolas","sans-serif";
+    font-weight:200;
+    font-size: 50px;   
+    color: black;
+    text-align:center;
+    
+    display: inline-block;
+    transform: scale(2);
+    transform-origin:top left;
+    
+     
+}
+h2
+{
+    font-family: "Work Sans", "consolas","sans-serif";
+    font-style: italic;
+    font-weight:300;
+    font-size: 40px;
+    color:black;
+    margin-left:40px;   
+    
+
+}
+
+#tekst{
+    max-width: 1200px;            
+    margin: 40px auto;            
+    background-color: #fafafa;    
+    padding: 20px;              
+    border-radius: 8px;          
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    line-height: 1.6; 
+    font-family: "Work Sans", "consolas","sans-serif";
+    text-align: justify;
+    font-weight: 300;
+
+    
+}
+h3{
+    margin-top: 0;               
+    text-align: center;           
+    font-weight: 400;             
+    color: #333;                  
+    font-size:30px;
+}
+#kontakt{
+    text-align: center;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    margin: 20px auto;
+    justify-content: center;
+  
+
+
+}
+h4{
+    font-family: "Work Sans", "consolas","sans-serif";
+    font-weight: 300;
+}
+#pasek{
+    display:flex;
+     align-items: center;
+     justify-content: center;
+    
+     margin: 20px auto;
+}
+#ikonki                   
+{ 
+    display: flex;
+    gap: 50px;
+    margin-left: 230px;
+}
+#moje_zdj{
+    margin-left: 150px;
+    transform:scale(2.7);
+    display:block;
+    height: 150px;
+    
+    
+
+}
+
+#moje_zdj img
+{
+    border:solid;
+    border-color: BLACK;
+    border-width:0.5px;
+
+}
+
+#ikonki img       
+{
+
+    transition: transform 0.4s ease-in-out;
+}
+#ikonki img:hover
+{            
+    
+    transform: scale(1.2);
+
+}
+
+.ikonka {
+    position: relative;
+    display: inline-block;
+}
+
+.ikonka .ikonka-napis {
+    visibility: hidden;
+    background-color: rgb(197, 194, 196); 
+    color: rgb(5, 5, 5); 
+    text-align: center;
+    padding: 2px 5px ;
+    border-radius: 1px;
+    position: absolute;
+    bottom: 120%; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    white-space: nowrap; 
+    font-size: 15px;
+
+
+    
+}
+.custom-hr {
+    border: none;
+    border-radius: 10px;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+    margin: 20px auto;
+    position: relative;
+    display:block;
+    width:80%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.ikonka:hover .ikonka-napis {
+    visibility: visible;
+    opacity: 1;
+}
+
+#zdjecia{
+    display: flex;
+    gap: 40px;
+    margin:20px auto;
+    justify-content: center;
+    
+   
+    
+    
+    
+}
+
+
+
+#zdjecia img{
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;;
+   
+}
+#zdjecia img:hover{
+    border:solid;
+    border-color: black;
+    border-width:1px; 
+    transform: scale(1.05); 
+    border: solid black 0.5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+#zdjecia a {
+    text-decoration: none; 
+}
+
+.zdjecia-napis{
+    display: block; 
+    text-align: center; 
+    font-size: 30px; 
+    color: black; 
+    margin-top: 1px; 
+    font-family: "Work Sans", "consolas","sans-serif"; 
+    text-transform: capitalize; 
+    transition: text-shadow 0.3s ease-in-out;
+    font-weight: 300;
+    font-style:italic;
+
+    
+    
+}
+
+
+
+
+
+/* --- MEDIA QUERY: ekrany do 768px szerokości (tablety, telefony) --- */
+@media (max-width: 768px) {
+    /* Bywa, że na mobilnych przeglądarkach "background-attachment: fixed" nie działa dobrze */
+    body {
+        background-attachment: scroll; 
+    }
+
+    /* NAGŁÓWEK h1 zmniejszamy, żeby nie zajmował połowy ekranu */
+    h1 {
+        font-size: 30px;        /* Zamiast 50px */
+        margin-left: 0;         /* Usuwamy duży margines z lewej */
+        text-align: center;     /* Wyśrodkuj */
+        transform: none;        /* Wyłączamy scale(2) na mobile */
+    }
+
+    /* h2 też mniejsze i wyśrodkowane */
+    h2 {
+        font-size: 24px;
+        margin-left: 0; 
+        text-align: center;
+    }
+
+    /* Główny pasek: elementy jeden pod drugim */
+    #pasek {
+        flex-direction: column;     /* Zamiast w linii */
+        align-items: center;
+        margin-left: 0;
+    }
+
+    /* Ikonki – zmniejszamy odstępy, wyśrodkowujemy */
+    #ikonki {
+        margin-left: 0;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Zmniejszamy skalę, żeby zdjęcie autora nie było olbrzymie na telefonie */
+    #moje_zdj {
+        margin-left: 0;
+        transform: scale(1.5);
+        margin-top: 10px;
+    }
+
+    /* Zdjęcia: układ w kolumnie + wyśrodkowanie */
+    #zdjecia {
+        flex-direction: column;
+        align-items: center; 
+        margin-left: 0; 
+    }
+
+    /* Same obrazki w #zdjecia dopasowują się szerokością do ekranu */
+    #zdjecia img {
+        width: 80%;      /* np. max 80% szerokości ekranu */
+        height: auto;
+        max-width: 400px;/* żeby się nie rozciągały ponad 400px */
+    }
+
+    /* Tekst o mnie: zmniejszamy marginesy */
+    #tekst {
+        margin: 20px 10px;
+        width: auto;
+    }
+
+    /* Kontakt: w kolumnie, wyśrodkowany */
+    #kontakt {
+        margin-left: 0;
+        flex-direction: column;
+        text-align: center;
+        margin: 20px auto;
+    }
+}
+
+
+
+.kontener{
+    max-width: 1400px;
+    margin:0 auto;
+    padding:0 20px;
+}
+/*nowe*/
+
