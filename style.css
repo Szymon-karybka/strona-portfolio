@@ -244,14 +244,19 @@ h4{
     #moje_zdj {
         margin-left: 0;
         transform: scale(1.5);
-        margin-top: 10px;
+        margin-top: 50px;
+        position:relative;
+        z-index:1;
     }
 
     /* Zdjęcia: układ w kolumnie + wyśrodkowanie */
     #zdjecia {
         flex-direction: column;
         align-items: center; 
-        margin-left: 0; 
+        
+        justify-content: center;
+        text-align: center;
+        width: 100%;
     }
 
     /* Same obrazki w #zdjecia dopasowują się szerokością do ekranu */
@@ -259,6 +264,7 @@ h4{
         width: 80%;      /* np. max 80% szerokości ekranu */
         height: auto;
         max-width: 400px;/* żeby się nie rozciągały ponad 400px */
+        
     }
 
     /* Tekst o mnie: zmniejszamy marginesy */
