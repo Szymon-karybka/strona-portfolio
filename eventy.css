@@ -1,0 +1,135 @@
+body{
+    background: #FAFAFA;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    
+  }
+  
+  /* 1. Gradientowa linia */
+  .custom-hr {
+    border: none;
+    border-radius: 10px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+    margin: 20px auto;
+    position: relative;
+    display: block;
+    width: 80%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 2. Nagłówek */
+  h1 {
+    font-family: "Work Sans", "consolas", "sans-serif";
+    font-weight: 200;
+    font-size: 50px;      /* Ważne: musimy dodać px, w przeciwnym razie przeglądarka może ignorować wartość */
+    text-align: center;
+    display: block;
+    transform: scale(2);
+    transform-origin: center;
+    /*margin-left: 100px; */  /* UWAGA: na mobile to może zepchnąć tekst poza ekran */
+  }
+  
+  /* 3. Galeria */
+  .galeria {
+    /* Żeby zachować odstęp od brzegów ekranu */
+    width: 90%;             /* Możesz zmienić na 80% lub inną wartość */
+    max-width: 1200px;      /* Maksymalna szerokość */
+    margin: 0 auto;         /* Wycentruje całość */
+    
+    display: grid;
+    /* Używasz gridu (nie flexboxa), więc flex-wrap nie działa. 
+       Zostawiam, bo pewnie tak było w kodzie – ale docelowo możesz usunąć. */
+    flex-wrap: wrap;
+    
+    gap: 16px;              
+    justify-content: center; 
+    grid-template-columns: 1fr; /* 1 kolumna na najmniejszych ekranach */
+  }
+  
+  /* --- Wygląd pojedynczego "kafelka" --- */
+  .fotografia {
+    display: block;
+  }
+  .fotografia img {
+    width: 100%;     /* Zdjęcie rozciąga się na cały „kafelek” */
+    height: auto;    /* Zawsze zachowujemy proporcje */
+    display: block;  /* Bez dodatkowych odstępów */
+    transition: transform 0.3s ease;
+  }
+  .fotografia img:hover {
+    transform: scale(0.95);
+    
+  }
+  
+  /* 4. Media queries dla gridu (rozkład kolumn): 
+   - od 576px: 2 kolumny
+   - od 768px: 3 kolumny
+   - od 1200px: 4 kolumny
+  
+   Warto je zapisać *bez* zagnieżdżania, np.:
+  */
+  @media (min-width: 576px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 1200px) {
+    .galeria {
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* ------------------------------------------
+   MEDIA QUERY NA TELEFONY:
+   Tutaj dopisujemy minimalne zmiany, 
+   które ułatwią oglądanie strony na małych ekranach
+  ------------------------------------------ */
+  @media (max-width: 768px) {
+    /* Zmniejszamy skalę h1 i usuwamy margin-left, aby nie „wypadał” poza ekran */
+    h1 {
+        margin-left: 0;      /* usuwamy przesunięcie */
+        transform: none;     /* wyłączamy scale(2) */
+        font-size: 30px;     /* trochę mniejsza czcionka */
+        display: block;      /* nie musi być inline-block */
+        text-align: center;
+    }
+  
+    /* Galeria – zostawiamy jedną kolumnę, 
+       bo poniżej 576px i tak jest 1fr (zdefiniowane wyżej),
+       więc w zasadzie nic tu nie musimy zmieniać. 
+       Jeśli chcesz, możesz jeszcze zmniejszyć gap lub inne parametry. */
+    .galeria {
+        gap: 10px;
+    }
+  }
+  .custom-hr {
+    border: none;
+    border-radius: 10px;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+    margin: 20px auto;
+    position: relative;
+    display:block;
+    width:80%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  #kontakt{
+    text-align: center;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    justify-content:center;
+    
+  
+  }
+  h4{
+    font-family: "Work Sans", "consolas","sans-serif";
+    font-weight: 300;
+  }

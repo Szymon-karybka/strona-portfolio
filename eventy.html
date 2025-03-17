@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - eventy</title>
+    
+    <link rel="stylesheet" href="krajobraz.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>Szymon Konopka - eventy</h1>
+    </div>
+    <br>
+    <hr class="custom-hr">
+    <br><br>
+
+    <div class="galeria">
+        <div class="fotografia"><img src="eventy2.jpg"></div>
+        <div class="fotografia"><img src="eventy3.jpg"></div>
+        <div class="fotografia"><img src="eventy4.jpg"></div>
+        <div class="fotografia"><img src="eventy5.jpg"></div>
+        <div class="fotografia"><img src="eventy6.jpg"></div>
+        <div class="fotografia"><img src="eventy8.jpg"></div>
+        <div class="fotografia"><img src="eventy9.jpg"></div>
+        <div class="fotografia"><img src="eventy10.jpg"></div>
+        <div class="fotografia"><img src="eventy11.jpg"></div>
+        <div class="fotografia"><img src="eventy12.jpg"></div>
+        <div class="fotografia"><img src="eventy13.JPG"></div>
+        <div class="fotografia"><img src="eventy14.jpg"></div>
+        <div class="fotografia"><img src="eventy15.jpg"></div>
+        <div class="fotografia"><img src="eventy16.jpg"></div>
+        <div class="fotografia"><img src="eventy17.jpg"></div>
+        <div class="fotografia"><img src="eventy18.jpg"></div>
+        <div class="fotografia"><img src="eventy19.jpg"></div>
+        <div class="fotografia"><img src="eventy20.jpg"></div>
+        <div class="fotografia"><img src="eventy21.jpg"></div>
+        <div class="fotografia"><img src="eventy22.jpg"></div>
+        <div class="fotografia"><img src="eventy23.jpg"></div>
+        <div class="fotografia"><img src="eventy24.jpg"></div>
+        <div class="fotografia"><img src="eventy25.jpg"></div>
+        <div class="fotografia"><img src="eventy26.jpg"></div>
+        <div class="fotografia"><img src="eventy26.jpg"></div>
+        <div class="fotografia"><img src="eventy27.jpg"></div>
+        <div class="fotografia"><img src="eventy28.jpg"></div>
+        <div class="fotografia"><img src="eventy29.jpg"></div>
+        <div class="fotografia"><img src="eventy30.jpg"></div>
+        <div class="fotografia"><img src="eventy31.jpg"></div>
+        <div class="fotografia"><img src="eventy32.jpg"></div>
+        <div class="fotografia"><img src="eventy33.jpg"></div>
+        <div class="fotografia"><img src="eventy34.jpg"></div>
+        <div class="fotografia"><img src="eventy35.jpg"></div>
+        <div class="fotografia"><img src="eventy36.jpg"></div>
+        <div class="fotografia"><img src="eventy37.jpg"></div>
+        <div class="fotografia"><img src="eventy38.jpg"></div>
+        <div class="fotografia"><img src="eventy39.jpg"></div>
+        <div class="fotografia"><img src="eventy40.jpg"></div>
+        <div class="fotografia"><img src="eventy41.JPG"></div>
+        <div class="fotografia"><img src="eventy42.JPG"></div>
+        <div class="fotografia"><img src="eventy43.JPG"></div>
+        <div class="fotografia"><img src="eventy44.jpg"></div>
+        
+
+
+      
+    </div>
+    <br>
+   
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const galeria = document.querySelector('.galeria');
+        const fotografie = Array.from(galeria.querySelectorAll('.fotografia'));
+        fotografie.sort(() => 0.5 - Math.random());
+        fotografie.forEach(el => galeria.appendChild(el));
+      });
+    </script>
+    <hr class="custom-hr">
+    <div id="kontakt">
+      <img src="/zdjęcia/poczta.png"  height="35"> <h4> napisz do mnie: konopkaszymonek@gmail.com</h4>
+
+  </div>
+</body>
+</html>
+   
