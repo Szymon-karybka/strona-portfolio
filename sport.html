@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - sport</title>
+    
+    <link rel="stylesheet" href="sport.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>Szymon Konopka - sport</h1>
+    </div>
+    <br>
+    <hr class="custom-hr">
+    <br><br>
+
+    <div class="galeria">
+        
+      <div class="fotografia"><img src="zdjecie(2).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(3).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(4).JPG"></div>
+
+      <div class="fotografia"><img src="zdjecie(7).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(8).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(9).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(10).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(11).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(12).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(13).JPG"></div>
+
+      <div class="fotografia"><img src="zdjecie(15).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(16).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(17).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(18).JPG"></div>
+
+      <div class="fotografia"><img src="zdjecie(20).JPG"></div>
+
+      <div class="fotografia"><img src="zdjecie(22).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(23).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(24).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(25).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(26).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(27).JPG"></div>
+
+      <div class="fotografia"><img src="zdjecie(29).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(30).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(31).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(32).JPG"></div>
+
+      <div class="fotografia"><img src="zdjecie(34).JPG"></div>
+      <div class="fotografia"><img src="zdjecie(35).JPG"></div>
+
+
+    </div>
+    <br>
+    <div class="galeria">
+        <div class="fotografia"><img src="zdjecie(1).JPG"></div>
+        <div class="fotografia"><img src="zdjecie(5).JPG"></div>
+        <div class="fotografia"><img src="zdjecie(6).JPG"></div>
+        <div class="fotografia"><img src="zdjecie(14).JPG"></div>
+        <div class="fotografia"><img src="zdjecie(19).JPG"></div>
+        <div class="fotografia"><img src="zdjecie(21).JPG"></div>
+        <div class="fotografia"><img src="zdjecie(28).JPG"></div>
+        <div class="fotografia"><img src="zdjecie(33).JPG"></div>
+
+
+
+
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const galeria = document.querySelector('.galeria');
+        const fotografie = Array.from(galeria.querySelectorAll('.fotografia'));
+        fotografie.sort(() => 0.5 - Math.random());
+        fotografie.forEach(el => galeria.appendChild(el));
+      });
+    </script>
+    <hr class="custom-hr">
+    <div id="kontakt">
+      <img src="/zdjęcia/poczta.png"  height="35"> <h4> napisz do mnie: konopkaszymonek@gmail.com</h4>
+
+  </div>
+</body>
+</html>

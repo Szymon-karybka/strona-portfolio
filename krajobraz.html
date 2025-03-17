@@ -1,0 +1,117 @@
+
+<!--JAAAAAAAAAAAAAAAAAANKNKNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA   SDSDSDSDSDSDSDSDSDSDS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Krajobraz</title>
+    
+    <link rel="stylesheet" href="krajobraz.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>Szymon Konopka - krajobraz</h1>
+    </div>
+    <br>
+    <hr class="custom-hr">
+    <br><br>
+
+    <div class="galeria">
+      <div class="fotografia"><img src="(1).jpg"></div>
+      <div class="fotografia"><img src="(2).jpg"></div>
+      <div class="fotografia"><img src="(3).jpg"></div>
+      
+      <div class="fotografia"><img src="(5).jpg"></div>
+      <div class="fotografia"><img src="(6).jpg"></div>
+      <div class="fotografia"><img src="(7).jpg"></div>
+      <div class="fotografia"><img src="(8).jpg"></div>
+      <div class="fotografia"><img src="(9).jpg"></div>
+      <div class="fotografia"><img src="(10).jpg"></div>
+      <div class="fotografia"><img src="(11).jpg"></div>
+      <div class="fotografia"><img src="(12).jpg"></div>
+      <div class="fotografia"><img src="(13).JPG"></div>
+      <div class="fotografia"><img src="(14).jpg"></div>
+      <!--<div class="fotografia"><img src="(15).jpg"></div>-->
+      <div class="fotografia"><img src="(16).jpg"></div>
+      <div class="fotografia"><img src="(17).jpg"></div>
+      <div class="fotografia"><img src="(18).jpg"></div>
+      <div class="fotografia"><img src="(19).jpg"></div>
+      <div class="fotografia"><img src="(20).jpg"></div>
+      <div class="fotografia"><img src="(21).jpg"></div>
+      <div class="fotografia"><img src="(22).jpg"></div>
+      <div class="fotografia"><img src="(23).jpg"></div>
+      <div class="fotografia"><img src="(24).jpg"></div>
+      
+      <div class="fotografia"><img src="(26).jpg"></div>
+      <div class="fotografia"><img src="(27).jpg"></div>
+      <div class="fotografia"><img src="(28).jpg"></div>
+      
+      <div class="fotografia"><img src="(30).jpg"></div>
+      <div class="fotografia"><img src="(31).jpg"></div>
+      
+      <div class="fotografia"><img src="(34).jpg"></div>
+      <div class="fotografia"><img src="(35).jpg"></div>
+      <div class="fotografia"><img src="(36).jpg"></div>
+      <div class="fotografia"><img src="(37).jpg"></div>
+      <div class="fotografia"><img src="(38).jpg"></div>
+      <div class="fotografia"><img src="(39).jpg"></div>
+      <div class="fotografia"><img src="(40).jpg"></div>
+      <div class="fotografia"><img src="(41).JPG"></div>
+      <div class="fotografia"><img src="(42).JPG"></div>
+      <div class="fotografia"><img src="(43).JPG"></div>
+      <div class="fotografia"><img src="(44).jpg"></div>
+      <div class="fotografia"><img src="(45).jpg"></div>
+      <div class="fotografia"><img src="(46).jpg"></div>
+      <div class="fotografia"><img src="(47).jpg"></div>
+      <!--<div class="fotografia"><img src="(48).jpg"></div>-->
+      <div class="fotografia"><img src="(49).JPG"></div>
+      <div class="fotografia"><img src="(50).JPG"></div>
+      <div class="fotografia"><img src="(51).JPG"></div>
+      <div class="fotografia"><img src="(52).JPG"></div>
+      <div class="fotografia"><img src="(53).JPG"></div>
+      <div class="fotografia"><img src="(54).JPG"></div>
+      
+      <div class="fotografia"><img src="(56).JPG"></div>
+      <div class="fotografia"><img src="(57).jpg"></div>
+      <div class="fotografia"><img src="(58).jpg"></div>
+      <div class="fotografia"><img src="(59).jpg"></div>
+      
+
+       
+    </div>
+    <br>
+    <!--zdjecia poziome-->
+    <div class="galeria">
+      <div class="fotografia"><img src="(4).jpg"></div>
+      <div class="fotografia"><img src="(25).jpg"></div>
+      <div class="fotografia"><img src="(29).jpg"></div>
+      <div class="fotografia"><img src="(32).jpg"></div>
+      <div class="fotografia"><img src="(33).jpg"></div>
+      <div class="fotografia"><img src="(55).JPG"></div>
+      <div class="fotografia"><img src="(60).jpg"></div>
+
+
+
+
+
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const galeria = document.querySelector('.galeria');
+        const fotografie = Array.from(galeria.querySelectorAll('.fotografia'));
+        fotografie.sort(() => 0.5 - Math.random());
+        fotografie.forEach(el => galeria.appendChild(el));
+      });
+    </script>
+    <hr class="custom-hr">
+    <div id="kontakt">
+      <img src="/zdjęcia/poczta.png"  height="35"> <h4> napisz do mnie: konopkaszymonek@gmail.com</h4>
+
+  </div>
+</body>
+</html>
+   

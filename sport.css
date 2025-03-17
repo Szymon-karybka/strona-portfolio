@@ -1,0 +1,108 @@
+body{
+  background: #FAFAFA;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  
+}
+/* 1. Gradientowa linia */
+.custom-hr {
+  border: none;
+  border-radius: 10px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+  margin: 20px auto;
+  position: relative;
+  display: block;
+  width: 80%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Nagłówek */
+h1 {
+  font-family: "Work Sans", "consolas", "sans-serif";
+  font-weight: 200;
+  font-size: 50px;    /* Upewnij się, że jednostka jest podana */
+  text-align: center;
+  display: block;
+  transform: scale(2);
+  transform-origin: center;
+ 
+}
+
+/* Galeria */
+.galeria {
+  /* Żeby zachować odstęp od brzegów ekranu */
+  width: 90%;       
+  max-width: 1200px;  
+  margin: 0 auto;     
+  display: grid;
+  flex-wrap: wrap;   /* W gridzie ta właściwość nie działa, ale nie zaszkodzi */
+  gap: 16px;        
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+
+/* Wygląd pojedynczego "kafelka" */
+.fotografia {
+  display: block;
+}
+
+.fotografia img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.fotografia img:hover {
+  transform: scale(0.95);
+}
+
+/* Media queries dla galerii na większych ekranach */
+@media (min-width: 576px) {
+  .galeria {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .galeria {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .galeria {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- MEDIA QUERY: dla ekranów poniżej 768px (tablety, smartfony) --- */
+@media (max-width: 768px) {
+  /* Dla nagłówka – usuwamy duży margines i skalowanie */
+  h1 {
+      margin-left: 0;      
+      transform: none;     
+      font-size: 30px;     
+      display: block;      
+      text-align: center;
+  }
+  
+  /* Opcjonalnie: zmniejszenie odstępów w galerii */
+  .galeria {
+      gap: 10px;
+  }
+}
+#kontakt{
+  text-align: center;
+  display:flex;
+  align-items: center;
+  gap:10px;
+  justify-content:center;
+
+
+}
+h4{
+  font-family: "Work Sans", "consolas","sans-serif";
+  font-weight: 300;
+}
