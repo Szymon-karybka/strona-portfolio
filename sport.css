@@ -4,6 +4,10 @@ body{
   background-attachment:fixed;
   
 }
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
 /* 1. Gradientowa linia */
 .custom-hr {
   border: none;
